@@ -1,0 +1,45 @@
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color:#537fde;
+}
+
+
+button {
+    background-color: #9db4e2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #537fde;
+}
+
+
+.login-container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login-form {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
