@@ -28,13 +28,12 @@ connection.connect((err) => {
   console.log('Conexão bem-sucedida ao banco de dados MySQL.');
 });
 
-// Rota para cadastro de usuário
 app.post('/cadastro', (req, res) => {
   const { username, email, password } = req.body;
 
   const query = 'INSERT INTO users (username, email, password) VALUES (?, ?, ?)';
 
-  db.query(query, [username, email, password], (err, results) => {
+  connection.query(query, [username, email, password], (err, results) => {
     if (err) {
       console.error(err);
       res.send('Erro ao cadastrar. <a href="/cadastro">Tente novamente</a>');
@@ -44,6 +43,8 @@ app.post('/cadastro', (req, res) => {
     }
   });
 });
+
+
 
 // Rota para verificação de login
 app.post('/login', (req, res) => {
@@ -80,8 +81,8 @@ app.get('/home', (req, res) => {
   res.render('home');
 });
 
-app.get('/conteudos', (req, res) => {
-  res.render('conteudos');
+app.get('/postagens', (req, res) => {
+  res.render('postagens');
 });
 
 app.get('/cadastro', (req, res) => {
